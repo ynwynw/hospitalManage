@@ -1,0 +1,78 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">药品编号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.yaopinbianhao==true}}"  placeholder="药品编号" model:value="{{yaopinbianhao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">药品名称</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.yaopinmingcheng==true}}"  placeholder="药品名称" model:value="{{yaopinmingcheng}}" />
+</view>
+<view class="item-box">
+<view class="item-label">价格</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.jiage==true}}"  placeholder="价格" model:value="{{jiage}}" />
+</view>
+<view class="item-box">
+<view class="item-label">数量</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.kucun==true}}"  placeholder="数量" model:value="{{kucun}}" />
+</view>
+<view class="item-box"    bindtap="uploadyaopintupian">
+<view   class="item-label">药品图片</view>
+<image  src="{{yaopintupianPath?yaopintupianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box">
+<view class="item-label" >药品类型</view>
+<picker   class="down-item-picker"     bindchange="yaopinleixingChange" value="{{yaopinleixingIndex}}"  range="{{yaopinleixingList}}">
+<view class="down-item-picker-text">
+{{yaopinleixingIndex||yaopinleixingIndex==0?yaopinleixingList[yaopinleixingIndex]:"请选择药品类型"}}
+</view>
+</picker>
+</view>
+<view class="item-box">
+<view class="item-label">规格</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.guige==true}}"  placeholder="规格" model:value="{{guige}}" />
+</view>
+<view class="item-box">
+<view class="item-label">生产批号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.shengchanpihao==true}}"  placeholder="生产批号" model:value="{{shengchanpihao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">保质期</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.baozhiqi==true}}"  placeholder="保质期" model:value="{{baozhiqi}}" />
+</view>
+<view class="item-box">
+<view class="item-label">生产日期</view>
+<picker   class="down-item-picker"    mode="date" value="{{shengchanriqi}}"  bindchange="shengchanriqiChange" >
+<view class="down-item-picker-text">  {{shengchanriqi}}</view>
+</picker>
+</view>
+<view class="item-box">
+<view class="item-label">企业名称</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.qiyemingcheng==true}}"  placeholder="企业名称" model:value="{{qiyemingcheng}}" />
+</view>
+<view class="item-box"  >
+<view class="item-label">药品详情</view>
+<com-edit class="item_edit"> </com-edit>
+</view>
+
+</view>
+
+
+<view class="btn-box">
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

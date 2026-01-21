@@ -1,0 +1,124 @@
+<view class="detail-container" >
+<view class="content"   bind:tap="authTap">
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#f56c6c30'   indicator-active-color="#f56c6c"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="index">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+<view class="detail-box">
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">药品编号：</view>
+<view class="detail-item-text">{{detailList.yaopinbianhao}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">药品名称：</view>
+<view class="detail-item-text">{{detailList.yaopinmingcheng}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">价格：</view>
+<view class="detail-item-text">{{detailList.jiage}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">数量：</view>
+<view class="detail-item-text">{{detailList.kucun}}</view>
+</view>
+<view class="detail-item-box">
+<view class="detail-item-label">药品图片：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.yaopintupian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">药品类型：</view>
+<view class="detail-item-text">{{detailList.yaopinleixing}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">规格：</view>
+<view class="detail-item-text">{{detailList.guige}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">生产批号：</view>
+<view class="detail-item-text">{{detailList.shengchanpihao}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">保质期：</view>
+<view class="detail-item-text">{{detailList.baozhiqi}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">生产日期：</view>
+<view class="detail-item-text">{{detailList.shengchanriqi}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">企业名称：</view>
+<view class="detail-item-text">{{detailList.qiyemingcheng}}</view>
+</view>
+
+
+
+
+
+
+
+
+<view class="textarea-box">
+<view class="textarea-label">药品详情</view>
+<view class="textarea-text">
+    <rich-text nodes="{{detailList.yaopinxiangqing}}"></rich-text>
+</view>
+</view>
+
+
+</view>
+
+<view class="operate-box">
+
+<view   wx:if="{{rukujiluisAuthFront}}"  >
+    <button class="common-btn"   data-info="rukujilu,'','',''" bind:tap="onAcrossTap" >
+入库</button>
+</view>
+<view wx:else="">
+    <button class="common-btn" wx:if="{{isAuthrukujilu}}"  data-info="rukujilu,'','',''" bind:tap="onAcrossTap" >
+        入库</button>
+</view>
+<view   wx:if="{{chukujiluisAuthFront}}"  >
+    <button class="common-btn"   data-info="chukujilu,'','',''" bind:tap="onAcrossTap" >
+出库</button>
+</view>
+<view wx:else="">
+    <button class="common-btn" wx:if="{{isAuthchukujilu}}"  data-info="chukujilu,'','',''" bind:tap="onAcrossTap" >
+        出库</button>
+</view>
+
+
+
+
+
+
+
+</view>
+
+</view>
+
+
+
+
+</view>

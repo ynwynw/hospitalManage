@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "com-date":"/component/com-date/com-date"
+  },
+  "navigationBarTitleText": "员工",
+  "navigationBarBackgroundColor":"#D6DEEB",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+
+}

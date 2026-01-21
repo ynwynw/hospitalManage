@@ -1,0 +1,64 @@
+<view class="detail-container" >
+<view class="content"   bind:tap="authTap">
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#f56c6c30'   indicator-active-color="#f56c6c"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="index">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+<view class="detail-item-box">
+<view class="detail-item-label">头像：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.touxiang}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">性别：</view>
+<view class="detail-item-text">{{detailList.xingbie}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">手机号码：</view>
+<view class="detail-item-text">{{detailList.shoujihaoma}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<view class="operate-box">
+
+<view   wx:if="{{kaoqinjiluisAuthFront}}"  >
+    <button class="common-btn"   data-info="kaoqinjilu,'','',''" bind:tap="onAcrossTap" >
+签到</button>
+</view>
+<view wx:else="">
+    <button class="common-btn" wx:if="{{isAuthkaoqinjilu}}"  data-info="kaoqinjilu,'','',''" bind:tap="onAcrossTap" >
+        签到</button>
+</view>
+
+
+
+
+
+
+
+</view>
+
+</view>
+
+
+
+
+</view>

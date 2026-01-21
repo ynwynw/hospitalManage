@@ -1,0 +1,85 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">订单编号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.dingdanbianhao==true}}"  placeholder="订单编号" model:value="{{dingdanbianhao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">药品名称</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.yaopinmingcheng==true}}"  placeholder="药品名称" model:value="{{yaopinmingcheng}}" />
+</view>
+<view class="item-box">
+<view class="item-label">价格</view>
+<input  class="item-input"
+bindinput="jine"
+type="text"  disabled="{{ro.jiage==true}}"  placeholder="价格" model:value="{{jiage}}" />
+</view>
+<view class="item-box">
+<view class="item-label">数量</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.kucun==true}}"  placeholder="数量" model:value="{{kucun}}" />
+</view>
+<view  class="item-box">
+<view  class="item-label">金额</view>
+<view  class="item-text">
+{{jine}}
+</view>
+</view>
+<view class="item-box"    bindtap="uploadyaopintupian">
+<view   class="item-label">药品图片</view>
+<image  src="{{yaopintupianPath?yaopintupianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box">
+<view class="item-label" >药品类型</view>
+<picker   class="down-item-picker"     bindchange="yaopinleixingChange" value="{{yaopinleixingIndex}}"  range="{{yaopinleixingList}}">
+<view class="down-item-picker-text">
+{{yaopinleixingIndex||yaopinleixingIndex==0?yaopinleixingList[yaopinleixingIndex]:"请选择药品类型"}}
+</view>
+</picker>
+</view>
+<view class="item-box">
+<view class="item-label">规格</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.guige==true}}"  placeholder="规格" model:value="{{guige}}" />
+</view>
+<view class="item-box">
+<view class="item-label">购买人姓名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.goumairenxingming==true}}"  placeholder="购买人姓名" model:value="{{goumairenxingming}}" />
+</view>
+<view class="item-box">
+<view class="item-label">手机号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.shoujihao==true}}"  placeholder="手机号" model:value="{{shoujihao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">身份证号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.shenfenzhenghao==true}}"  placeholder="身份证号" model:value="{{shenfenzhenghao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">员工账号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.yuangongzhanghao==true}}"  placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">员工姓名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.yuangongxingming==true}}"  placeholder="员工姓名" model:value="{{yuangongxingming}}" />
+</view>
+
+</view>
+
+
+<view class="btn-box">
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

@@ -1,0 +1,86 @@
+
+    <!-- 上导航部分 -->
+<view class="tab">
+  <view class="tab-item {{tab==0?'active':''}}" bindtap="changeitem" data-item="0">播放列表</view>
+  <view class="tab-item {{tab==1?'active':''}}" bindtap="changeitem" data-item="1"> 音乐播放</view>
+</view>
+<!-- 滑块视图容器 current当前所在滑块的 index-->
+<swiper style="height: {{curHeight}};" current="{{item}}" bindchange="changetab">
+<swiper-item>
+<scroll-view   bindscrolltolower="fatherMethod" class="content-playlist" scroll-y style="height: 100%;display: flex;flex-direction: column;justify-content: space-between;" >
+<view class="playlist-item"  bindtap="detailBtn" data-item="{{item}}" wx:for="{{playlist}}" wx:key="index" data-index="{{index}}">
+<view style="display: flex;">
+<image class="playlist-cover" src="{{baseURL+item.coverImgUrl}}" />
+<view class="playlist-info">
+<view class="playlist-info-title">{{item.title}}</view>
+<view class="playlist-info-singer">{{item.singer}}</view>
+</view>
+</view>
+<!-- 点击播放 -->
+<view class="playlist-controls" >
+<view wx:if="{{ !initClick&&playIndex==index }}" >正在播放</view>
+<image wx:else="" data-index="{{index}}" catch:tap="playListTap" style="width: 20px;height: 20px;" src="../../static/stop1.png" />
+</view>
+</view>
+</scroll-view>
+</swiper-item>
+<swiper-item>
+    <!-- 播放器 -->
+<view class="content-play"  >
+<!-- 显示音乐信息 -->
+<view class="content-play-info">
+<text>{{play.title}}</text>
+<view>--{{play.singer}}--</view>
+</view>
+<!-- 专题封皮 -->
+<view class="content-play-cover" >
+<image src="{{baseURL+play.coverImgUrl}}" style="animation-play-state: {{state}};"></image>
+</view>
+<view class="content-play-progress"></view>
+<!-- 播放进度和时间 -->
+<view class="content-play-progress">
+<text>{{play.currentTime}}</text>
+<view>
+<!-- 滑动选择器 -->
+<slider bindtap="sliderChange" activeColor="#d33a31" block-size="12" backgroundColor="#dadada" value="{{play.percent}}"></slider>
+</view>
+<text>{{play.duration}}</text>
+</view>
+</view>
+</swiper-item>
+  </swiper>
+<!-- 音乐导航底部 -->
+<view class="player" wx:if="{{tab!=1 && musicPlayShow}}">
+<view style="display:flex;justify-content: center;width: 100%;">
+  <image class="player-cover" src="{{baseURL+play.coverImgUrl}}" />
+  <view class="player-info">
+    <view class="player-info-title">{{play.title}}</view>
+    <view class="player-info-singer">{{play.singer}}</view>
+  </view>
+  <view class="player-controls">
+    <!-- 切换到播放列表 -->
+
+    <!-- 默认列表播放 -->
+    <image wx:if="{{playMode==='sequential'}}" src="../../static/sequentialPlayback.png" bindtap="singlePlayback" />
+    <!-- 随机播放 -->
+    <image  wx:if="{{playMode==='shuffle'}}" src="../../static/shuffle.png" bindtap="sequentialPlayback" />
+    <!-- 单曲循环 -->
+    <image  wx:if="{{playMode==='single'}}" src="../../static/single.png" bindtap="shuffle" />
+    <!-- 下一曲 -->
+    <!-- 播放或暂停 -->
+    <image wx:if="{{state=='running'}}" src="../../static/start.png"  bindtap="pause" />
+    <image wx:else="" src="../../static/stop.png" bindtap="play" />
+    <!-- 下一曲 -->
+    <image src="../../static/nextSong.png" bindtap="next" />
+  </view>
+</view>
+<!-- 播放进度和时间 -->
+<view class="content-play-progress" style="width: 100%;">
+    <text>{{play.currentTime}}</text>
+    <view>
+    <!-- 滑动选择器 -->
+    <slider   bindchange="sliderChange" activeColor="#d33a31" block-size="12" backgroundColor="#dadada" value="{{play.percent}}"></slider>
+    </view>
+    <text>{{play.duration}}</text>
+</view>
+</view>

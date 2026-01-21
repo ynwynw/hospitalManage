@@ -1,0 +1,119 @@
+<view class="detail-container" >
+<view class="content"   bind:tap="authTap">
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#f56c6c30'   indicator-active-color="#f56c6c"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="index">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">订单编号：</view>
+<view class="detail-item-text">{{detailList.dingdanbianhao}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">药品名称：</view>
+<view class="detail-item-text">{{detailList.yaopinmingcheng}}</view>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">价格：</view>
+<view class="detail-item-text">{{detailList.jiage}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">数量：</view>
+<view class="detail-item-text">{{detailList.kucun}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">金额：</view>
+<view class="detail-item-text">{{detailList.jine}}</view>
+</view>
+
+
+<view class="detail-item-box">
+<view class="detail-item-label">药品图片：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.yaopintupian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">药品类型：</view>
+<view class="detail-item-text">{{detailList.yaopinleixing}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">规格：</view>
+<view class="detail-item-text">{{detailList.guige}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">购买人姓名：</view>
+<view class="detail-item-text">{{detailList.goumairenxingming}}</view>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">手机号：</view>
+<view class="detail-item-text">{{detailList.shoujihao}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">身份证号：</view>
+<view class="detail-item-text">{{detailList.shenfenzhenghao}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工账号：</view>
+<view class="detail-item-text">{{detailList.yuangongzhanghao}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">员工姓名：</view>
+<view class="detail-item-text">{{detailList.yuangongxingming}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<view class="operate-box">
+
+
+
+
+
+
+
+
+</view>
+
+</view>
+
+
+
+
+</view>

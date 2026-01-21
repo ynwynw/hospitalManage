@@ -1,0 +1,115 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/forget/forget",
+  "pages/yuangong/register",
+
+    "pages/vip-payconfirm/vip-payconfirm",
+    "pages/vip-payconfirm/vip-paysuccess",
+    "pages/user-info/user-info",
+    "pages/reply/reply",
+    "component/dateTimePicker/dateTime",
+    "component/timetable/timetable",
+    "component/com-date/com-date",
+    "component/com-editor/com-editor",
+    "component/comment-item/comment-item",
+    "component/com-popup/com-popup",
+    "component/com-video/com-video",
+    "component/com-manySel/com-manySel",
+    "component/tree-menu/tree-menu",
+    "component/musicPlayer/musicPlayer",
+
+  "pages/news/detail",
+  "pages/news/list",
+   "pages/systemintro/detail",
+    "pages/systemintro/update-and-add",
+    "pages/systemintro/list",
+   "pages/syslog/detail",
+    "pages/syslog/update-and-add",
+    "pages/syslog/list",
+   "pages/yuangong/detail",
+    "pages/yuangong/update-and-add",
+    "pages/yuangong/list",
+   "pages/kaoqinjilu/detail",
+    "pages/kaoqinjilu/update-and-add",
+    "pages/kaoqinjilu/list",
+   "pages/yaopinxinxi/detail",
+    "pages/yaopinxinxi/update-and-add",
+    "pages/yaopinxinxi/list",
+   "pages/yaopinleixing/detail",
+    "pages/yaopinleixing/update-and-add",
+    "pages/yaopinleixing/list",
+   "pages/rukujilu/detail",
+    "pages/rukujilu/update-and-add",
+    "pages/rukujilu/list",
+   "pages/chukujilu/detail",
+    "pages/chukujilu/update-and-add",
+    "pages/chukujilu/list",
+   "pages/yaopindingdan/detail",
+    "pages/yaopindingdan/update-and-add",
+    "pages/yaopindingdan/list",
+   "pages/shouzhimingxi/detail",
+    "pages/shouzhimingxi/update-and-add",
+    "pages/shouzhimingxi/list",
+    "pages/center/center"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的"
+    }
+  },
+  "requiredPrivateInfos": [ "getLocation" ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "selectedColor": "#33a3dc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/index.png",
+        "selectedIconPath": "/static/index1.png",
+        "text": "首页"
+      },
+
+
+
+{
+  "pagePath": "pages/news/list",
+  "iconPath": "static/tabs/1/news.png",
+  "selectedIconPath": "static/tabs/1/news_act.png",
+  "text": "新闻公告"
+},
+
+
+
+
+
+  {
+  "pagePath": "pages/yaopinxinxi/list",
+    "iconPath": "/static/tabs/1/icon1.png",
+    "selectedIconPath": "/static/tabs/1/icon1_act.png",
+      "text": "药品信息"
+  },
+
+
+
+
+
+
+{
+"pagePath": "pages/center/center",
+"iconPath": "static/tabs/1/mine.png",
+"selectedIconPath": "static/tabs/1/mine1.png",
+"text": "我的"
+}
+
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

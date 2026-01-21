@@ -1,0 +1,325 @@
+/* pages/register/register.wxss */
+
+.register-container {
+min-height
+:100vh;
+width
+:100%;
+padding
+:12px 12px 12px 12px;
+background
+:url(http://localhost:8080/hospitalDrugManage/file/7168f52548a34c098773452556a9ebc3.jpg) no-repeat center top / cover;
+}
+.register-container {
+background-image: url("http://localhost:8080/hospitalDrugManage/file/7168f52548a34c098773452556a9ebc3.jpg");
+}
+.avatar {
+width
+:80px;
+margin
+:0 auto 12px auto;
+border-radius
+:4px;
+display
+:none;
+height
+:80px;
+}
+.content {
+padding
+:12px 12px 12px 12px;
+margin
+:150px 0 0;
+border-radius
+:10px;
+text-align
+:center;
+background
+:#ffffff;
+display
+:block;
+width
+:100%;
+height
+:auto;
+}
+
+.upload-text{
+color
+:#000;
+display
+:none;
+}
+.upload-img {
+width
+:80px;
+border-radius
+:8px;
+display
+:block;
+height
+:80px;
+}
+.box-uploadBox{
+width
+:100%;
+padding
+:12px 12px 12px 12px;
+height
+:100%;
+}
+.box{
+width
+:100%;
+margin
+:0 0 12px 0;
+font-size
+:14px;
+color
+:#666;
+text-align
+:left;
+height
+:auto;
+}
+input{
+width:90%!important;
+border
+:1px dashed #ddd;
+padding
+:0px 12px 0 12px;
+margin
+:0 0 0 0;
+color
+:#000;
+border-radius
+:0px;
+background
+:#fff;
+border-width
+:0 0 1px 0;
+width
+:100%;
+font-size
+:14px;
+height
+:44px;
+}
+.select-date{
+
+border
+:1px dashed #ddd;
+
+padding
+:0px 12px 0 12px;
+
+margin
+:0 0 12px 0;
+
+text-align
+:left;
+
+border-width
+:0 0 1px 0;
+
+
+height
+:auto;
+}
+.picker-text{
+width
+:100%;
+line-height
+:44px;
+font-size
+:14px;
+color
+:#767676;
+}
+.register-btn {
+border
+:0;
+padding
+:0 0 0 0;
+margin
+:12px 0 12px 0;
+color
+:#fff;
+border-radius
+:30px;
+background
+:#f56c6c;
+width
+:auto;
+line-height
+:40px;
+font-size
+:16px;
+min-width
+:80%;
+height
+:40px;
+}
+.radio-box{
+width
+:100%;
+padding
+:10px 12px 10px 12px;
+text-align
+:left;
+}
+
+
+
+.checkbox-box{
+width
+:100%;
+padding
+:10px 12px 10px 12px;
+text-align
+:left;
+}
+.checkbox-label{
+padding
+:0 0 6px 0;
+}
+.checkbox-group-box{
+align-items
+:center;
+display
+:flex;
+}
+.code-box{
+width
+:100%;
+margin
+:0 0 12px 0;
+flex-wrap
+:wrap;
+text-align
+:left;
+display
+:flex;
+height
+:auto;
+position: relative;
+}
+.send-code-btn {
+border
+:0;
+padding
+:0 0 0 0;
+margin
+:0 0 0 0;
+color
+:#fff;
+border-radius
+:4px;
+background
+:#f56c6c;
+width
+:84px;
+line-height
+:44px;
+font-size
+:14px;
+height
+:44px;
+position: absolute;
+right: 20px;
+}
+.code-input{
+border
+:1px dashed #ddd;
+padding
+:0 12px 0 12px;
+margin
+:0 0 0 0;
+color
+:#000;
+background
+:#fff;
+border-width
+:0 0 1px 0;
+width
+:calc(100% - 84px);
+font-size
+:14px;
+height
+:44px;
+}
+
+.item-box{
+width
+:100%;
+margin
+:0 0 12px 0;
+font-size
+:14px;
+color
+:#666;
+text-align
+:left;
+height
+:auto;
+}
+.item-label{
+}
+
+.item-radio-itemBox{
+align-items
+:center;
+display
+:flex;
+}
+
+.active{
+color
+:#f56c6c;
+}
+
+
+.radio-itemText{
+color
+:#666;
+}
+
+
+
+
+.checkBox-active{
+color
+:#f56c6c;
+}
+.checkBox-itemText{
+color
+:#666;
+}
+.item-checkbox-itemBox{
+align-items
+:center;
+display
+:flex;
+}
+.item-checkbox-item{
+align-items
+:center;
+margin
+:0 10px 0 0;
+display
+:flex;
+}
+checkbox .wx-checkbox-input {
+border-color
+:#666;
+background
+:#fff;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+color
+:#fff;
+border-color
+:#f56c6c;
+background
+:#f56c6c;
+}
