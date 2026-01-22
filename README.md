@@ -7,7 +7,7 @@
 ### 选题+开题报告+任务书+程序定制+安装调试+论文+答辩ppt
 
 **博客地址：
-[https://blog.csdn.net/2303_76227485/article/details/155790094](https://blog.csdn.net/2303_76227485/article/details/155790094)**
+[https://blog.csdn.net/2303_76227485/article/details/156391776](https://blog.csdn.net/2303_76227485/article/details/156391776)**
 
 **视频演示：
 [https://www.bilibili.com/video/BV1Z4v6BfEPN/](https://www.bilibili.com/video/BV1Z4v6BfEPN/)**
